@@ -1,0 +1,27 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# TypeScript
+*.tsbuildinfo
+dist/
+
+# IDE et éditeurs
+.vscode/
+.idea/
+*.swp
+
+# Systèmes d'exploitation
+.DS_Store
+Thumbs.db
+
+# Fichiers spécifiques à l'application
+todolist/tasks.json
+autre_app/*.json
