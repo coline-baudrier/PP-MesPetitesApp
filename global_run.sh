@@ -1,18 +1,21 @@
 #!/bin/bash
 
 echo "=== Mes Applications ==="
-apps=($(ls -d */))
-select app in "${apps[@]}" "Quitter"; do 
+
+apps=("todolist" "Quitter")
+
+select app in "${apps[@]}"; do
     case $app in
-        Quitter)
-            echo "On se capte plus tard !"
+        "todolist")
+            echo "Lancement de ta liste des tâches..."
+            npm run start:todolist
+            ;;
+        "Quitter")
+            echo "On se voit plus tard !"
             exit 0
             ;;
         *)
-            cd $app
-            echo "Lancement de $app..."
-            npm start
-            cd ..
+            echo "Option invalide"
             ;;
     esac
 done
